@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <title>EnaileTechnology - Previsão do Tempo</title>
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-in-out;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="larger-box">
+        <input class="input-city" placeholder="Enter the name of the city">
+        <button class="search-button" onclick="clickSearchButton()">
+            <img class="img-search" src="https://www.svgrepo.com/show/488200/find.svg" alt="search">
+        </button>
+
+        <div class="mean-box">
+            <h2 class="city">Tempo em São Paulo</h2>
+            <p class="temp">21°C</p>
+
+            <div class="small-box">
+                <img class="img-forecast" src="https://openweathermap.org/img/wn/04n.png" alt="icon-info-weather">
+                <p class="text-forecast">Nublado</p>
+            </div>
+        </div>
+
+        <p class="humidity">Umidade Relativa do Ar: 76%</p>
+        <p class="error-message"></p> <!-- Adicionado para exibir mensagens de erro -->
+    </div>
+</body>
+
+</html>
