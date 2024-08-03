@@ -1,6 +1,6 @@
 const key = "e17bd81fabd8224566bdfed36eb8936a";
-const unsplashApiKey = 'WQJBe6TDJCuUny2mPJl064XIdnwxqqnkApw0XC2mD2s'; // Substitua pela sua chave da API
-const fallbackImageUrl = 'https://source.unsplash.com/random'; // URL da imagem aleatória
+const unsplashApiKey = 'WQJBe6TDJCuUny2mPJl064XIdnwxqqnkApw0XC2mD2s';
+const fallbackImageUrl = 'https://source.unsplash.com/random';
 
 function clearScreen() {
     document.querySelector(".city").innerHTML = "";
@@ -17,13 +17,13 @@ function displayError(message) {
 
 function populatingTheScreen(data) {
     clearScreen();
-    document.querySelector(".city").innerHTML = "Weather in " + data.name;
+    document.querySelector(".city").innerHTML = "Tempo em " + data.name;
     document.querySelector(".temp").innerHTML = Math.floor(data.main.temp) + "°C";
     document.querySelector(".text-forecast").innerHTML = data.weather[0].description;
-    document.querySelector(".humidity").innerHTML = "Relative humidity: " + data.main.humidity + "%";
+    document.querySelector(".humidity").innerHTML = "Umidade Relativa do Ar: " + data.main.humidity + "%";
     document.querySelector(".img-forecast").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
-    // Atualiza o fundo com base na descrição do tempo
+    
     updateBackgroundImage(data.name);
 }
 
@@ -36,10 +36,10 @@ async function fetchImage(query) {
         if (data.results.length > 0) {
             return data.results[0].urls.regular;
         } else {
-            return fallbackImageUrl; // URL de uma imagem aleatória se nenhuma imagem for encontrada
+            return fallbackImageUrl;
         }
     } catch (error) {
-        return fallbackImageUrl; // URL de uma imagem aleatória se houver um erro na requisição
+        return fallbackImageUrl;
     }
 }
 
@@ -59,8 +59,8 @@ async function searchCity(city) {
         const data = await response.json();
 
         populatingTheScreen(data);
-        await updateBackgroundImage(city); // Atualiza o fundo com base na cidade
-        document.querySelector(".error-message").innerHTML = ""; // Limpa qualquer mensagem de erro anterior
+        await updateBackgroundImage(city);
+        document.querySelector(".error-message").innerHTML = "";
     } catch (error) {
         displayError("Cidade não encontrada. Verifique o nome da cidade e tente novamente.");
     }
