@@ -22,38 +22,32 @@ Este projeto é uma aplicação web que permite aos usuários consultar a previs
 ## Como Usar
 
 1. **Clone o Repositório**
-
    ```bash
    git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
 
 2. **Navegue para o Diretório do Projeto**
-
-cd SEU_REPOSITORIO
+   cd SEU_REPOSITORIO
 
 3. **Abra o Arquivo index.html**
+   Abra o arquivo index.html no seu navegador para visualizar a aplicação.
 
-Abra o arquivo index.html no seu navegador para visualizar a aplicação.
-
-4. **Configure as Chaves de API**
-
-No arquivo scripts.js, substitua as chaves de API pelos seus valores pessoais:
-
-const key = "SUA_CHAVE_OPENWEATHER";
-const unsplashApiKey = 'SUA_CHAVE_UNSPLASH';
+5. **Configure as Chaves de API**
+   No arquivo scripts.js, substitua as chaves de API pelos seus valores pessoais:
+  - const key = "SUA_CHAVE_OPENWEATHER";
+  - const unsplashApiKey = 'SUA_CHAVE_UNSPLASH';
 
 ## Estrutura do Projeto
 
-- index.html: Arquivo principal da página.
-- styles.css: Arquivo de estilos.
-- scripts.js: Arquivo JavaScript com a lógica da aplicação.
+  - index.html: Arquivo principal da página.
+  - styles.css: Arquivo de estilos.
+  - scripts.js: Arquivo JavaScript com a lógica da aplicação.
 
 ## Contribuindo
-
-Sinta-se à vontade para fazer um fork do projeto e enviar um pull request com melhorias.
+  Sinta-se à vontade para fazer um fork do projeto e enviar um pull request com melhorias.
 
 ## Licença
-Este projeto está licenciado sob a MIT License.
+  Este projeto está licenciado sob a MIT License.
 
 ## Autor
-@inc Enaile Technology
+  @inc Enaile Technology
 
